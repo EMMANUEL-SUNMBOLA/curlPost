@@ -6,9 +6,11 @@ $data = [
     "author" => "caveman"
 ];
 
+// $json_data = json_encode($data);
+
 $curl = curl_init();
 $options = [
-    CURLOPT_URL => "localhost:5533/facts/dogs",
+    CURLOPT_URL => "http://localhost:5533/receiver.php",
     CURLOPT_POST => 1,
     CURLOPT_POSTFIELDS => $data,
     CURLOPT_RETURNTRANSFER => 1
