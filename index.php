@@ -2,17 +2,17 @@
 
 
 $data = [
-    "fact" => "The sex position 'Doggy' was actually learnt from Dogs",
+    "fact" => "Dogs can't injure you if you injure them first",
     "author" => "caveman"
 ];
 
-// $json_data = json_encode($data);
+$json_data = json_encode($data);
 
 $curl = curl_init();
 $options = [
     CURLOPT_URL => "http://localhost:5533/receiver.php",
     CURLOPT_POST => 1,
-    CURLOPT_POSTFIELDS => $data,
+    CURLOPT_POSTFIELDS => $json_data,
     CURLOPT_RETURNTRANSFER => 1
 ];
 
