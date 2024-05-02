@@ -13,7 +13,11 @@ $options = [
     CURLOPT_URL => "http://localhost:5533/receiver.php",
     CURLOPT_POST => 1,
     CURLOPT_POSTFIELDS => $json_data,
-    CURLOPT_RETURNTRANSFER => 1
+    CURLOPT_RETURNTRANSFER => 1,
+    CURLOPT_HTTPHEADER => [
+        'Content-Type: application/caveman',
+        'CaveKey:cavemansolos$$'
+    ]
 ];
 
 curl_setopt_array($curl, $options);
